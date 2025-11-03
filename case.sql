@@ -1,10 +1,15 @@
-select first_name, age, 
-case 
-	when age <= 30 then 'Young'
-	when age between 31 and 50 then 'Old'
-	when age >= 50 then "On death's door" 
-End as age_bracket
-from employee_demographics;
+SELECT
+    first_name,
+    age,
+    CASE
+        WHEN age <= 30 THEN 'Young'
+        WHEN age BETWEEN 31
+        AND 50 THEN 'Old'
+        WHEN age >= 50 THEN "On death's door"
+    END AS age_bracket
+FROM
+    employee_demographics;
+
 
 
 SELECT
@@ -19,9 +24,8 @@ SELECT
     -- Calculate bonus conditionally based on dept_id = 6
     CASE
         WHEN sal.dept_id = 6 THEN sal.salary * 0.1
-        ELSE 0  -- Employees in other departments get 0 bonus
+        ELSE 0 -- Employees in other departments get 0 bonus
     END AS bonus
 FROM
     employee_salary AS sal
-LEFT JOIN 
-    parks_departments AS pd ON sal.dept_id = pd.department_id;
+    LEFT JOIN parks_departments AS pd ON sal.dept_id = pd.department_id;

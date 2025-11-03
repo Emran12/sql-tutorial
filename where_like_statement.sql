@@ -1,22 +1,95 @@
-select * from parks_and_recreation.employee_demographics;
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_demographics;
 
-select * from parks_and_recreation.employee_demographics where first_name = 'Tom';
 
-select * from parks_and_recreation.employee_demographics where gender = 'Female';
 
-select * from parks_and_recreation.employee_demographics where age > 40;
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_demographics
+WHERE
+    first_name = 'Tom';
 
-select * from parks_and_recreation.employee_salary where salary > 50000 and occupation = 'Office Manager';
 
-select * from parks_and_recreation.employee_salary where first_name like 'a%';
 
-select * from parks_and_recreation.employee_salary where first_name like '%a';
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_demographics
+WHERE
+    gender = 'Female';
 
-select * from parks_and_recreation.employee_salary where first_name like '%a%';
 
-select * from parks_and_recreation.employee_salary where first_name like '%er%';
 
-select * from parks_and_recreation.employee_salary where first_name like '____'; 
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_demographics
+WHERE
+    age > 40;
 
-select * from parks_and_recreation.employee_salary where first_name like '__n%';
 
+
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_salary
+WHERE
+    salary > 50000
+    AND occupation = 'Office Manager';
+
+
+
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_salary
+WHERE
+    first_name LIKE 'a%';
+
+
+
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_salary
+WHERE
+    first_name LIKE '%a';
+
+
+
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_salary
+WHERE
+    first_name LIKE '%a%';
+
+
+
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_salary
+WHERE
+    first_name LIKE '%er%';
+
+
+
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_salary
+WHERE
+    first_name LIKE '____';
+
+
+
+SELECT
+    *
+FROM
+    parks_and_recreation.employee_salary
+WHERE
+    first_name LIKE '__n%';

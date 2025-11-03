@@ -1,24 +1,60 @@
-select * from employee_demographics
-union 
-select * from employee_salary;
-
-select first_name, last_name, 'Old' as Label 
-from employee_demographics
-where age > 40
-union
-select first_name, last_name, 'Highly Paid Employee' as Label 
-from employee_salary 
-where salary > 70000 ;
+SELECT
+    *
+FROM
+    employee_demographics
+UNION
+SELECT
+    *
+FROM
+    employee_salary;
 
 
-select first_name, last_name, 'Old Man' as Label 
-from employee_demographics
-where age > 40 and gender = 'Male'
-union
-select first_name, last_name, 'Old Lady' as Label 
-from employee_demographics
-where age > 40 and gender = 'Female'
-union
-select first_name, last_name, 'Highly Paid Employee' as Label 
-from employee_salary 
-where salary > 70000 ;
+
+SELECT
+    first_name,
+    last_name,
+    'Old' AS Label
+FROM
+    employee_demographics
+WHERE
+    age > 40
+UNION
+SELECT
+    first_name,
+    last_name,
+    'Highly Paid Employee' AS Label
+FROM
+    employee_salary
+WHERE
+    salary > 70000;
+
+
+
+SELECT
+    first_name,
+    last_name,
+    'Old Man' AS Label
+FROM
+    employee_demographics
+WHERE
+    age > 40
+    AND gender = 'Male'
+UNION
+SELECT
+    first_name,
+    last_name,
+    'Old Lady' AS Label
+FROM
+    employee_demographics
+WHERE
+    age > 40
+    AND gender = 'Female'
+UNION
+SELECT
+    first_name,
+    last_name,
+    'Highly Paid Employee' AS Label
+FROM
+    employee_salary
+WHERE
+    salary > 70000;

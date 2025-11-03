@@ -1,10 +1,27 @@
-select * from employee_demographics
-where employee_id in (
-						select employee_id 
-                        from employee_salary 
-                        where dept_id = 1); 
+SELECT
+    *
+FROM
+    employee_demographics
+WHERE
+    employee_id IN (
+        SELECT
+            employee_id
+        FROM
+            employee_salary
+        WHERE
+            dept_id = 1
+    );
 
-select first_name, salary, (select avg(salary) 
-from employee_salary)
-from employee_salary; 
 
+
+SELECT
+    first_name,
+    salary,
+    (
+        SELECT
+            avg(salary)
+        FROM
+            employee_salary
+    )
+FROM
+    employee_salary;
